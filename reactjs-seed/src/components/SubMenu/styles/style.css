@@ -1,0 +1,52 @@
+.has-filterIndicatorBlock {
+    display: block;
+    overflow: hidden;
+    border: 0 !important;
+}
+.filterIndicatorBlock {
+    position: relative;
+    padding: 25px 0 10px;
+    cursor: pointer;
+}
+.jumbotron {
+    background-color: #f0f0f0 !important;
+}
+.tittleInput {
+    margin-bottom: 3px !important;
+}
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+@keyframes anima {
+    from {
+        opacity: 0.01;
+    }
+    to {
+        opacity: 1;
+        transition: opacity 500ms ease-in;
+    }
+}
+.easeinAnimation{
+    animation: anima 1.0s;
+}
+
+.example-leave {
+    opacity: 1;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+.flasher {
+    display: block;
+    animation: flasher 0.5s;
+    background: red;
+    color: white;
+}

@@ -1,0 +1,113 @@
+:root {
+  /* BACKGROUND COLORS */
+  --BackgroundGradientHeader: linear-gradient(to right, #19133A, #1D1642 100%);
+  --backgroundNavbar: #ffff;
+  --backgroundBody: #E4E4E4;
+  --backgroundOffSidebar: #fff;
+
+  /* NAVBAR COMPONENTS */
+  --titleNavbar: #000000;
+  --hoverMenusNavbar: #900000;
+  --activeMenu: #C20000;
+  --submenuColorInactive: #000000;
+
+  /* OFFSIDEBAR COMPONENTS */
+  --colorTextOffSidebar: #000000;
+
+  --iconColor: #656565;
+
+}
+/* ========================================================================
+   Component: layout
+ ========================================================================== */
+body, .wrapper .section-container {
+  background-color: var(--backgroundBody) }
+
+.wrapper .aside-container {
+  background-color: var(--backgroundBody); }
+
+/* ========================================================================
+   Component: top-navbar
+ ========================================================================== */
+.topnavbar {
+  background-color: transparent;
+  background-image: var(--BackgroundGradientHeader);
+  background-repeat: repeat-x; }
+  @media (min-width: 768px) {
+    .topnavbar .navbar-header {
+      background-image: none; } }
+  .topnavbar .navbar-nav > li > .navbar-text {
+    color: #900000; }
+  .topnavbar .navbar-nav > li > a, .topnavbar .navbar-nav > .open > a {
+    color: #900000; }
+    .topnavbar .navbar-nav > li > a:hover, .topnavbar .navbar-nav > li > a:focus, .topnavbar .navbar-nav > .open > a:hover, .topnavbar .navbar-nav > .open > a:focus {
+      color: #117391; }
+  .topnavbar .navbar-nav > .active > a, .topnavbar .navbar-nav > .active > a:hover, .topnavbar .navbar-nav > .active > a:focus, .topnavbar .navbar-nav > .open > a, .topnavbar .navbar-nav > .open > a:hover, .topnavbar .navbar-nav > .open > a:focus {
+    background-color: transparent; }
+  .topnavbar .navbar-nav > li > [data-toggle='navbar-search'] {
+    color: #000000; }
+  .topnavbar .nav-wrapper {
+    background-color: #900000;
+    background-image: var(--BackgroundGradientHeader);
+    background-repeat: repeat-x; }
+
+@media (min-width: 768px) {
+  .topnavbar {
+    background-color: #900000;
+    background-image: var(--BackgroundGradientHeader);
+    background-repeat: repeat-x; }
+    .topnavbar .navbar-nav > .open > a, .topnavbar .navbar-nav > .open > a:hover, .topnavbar .navbar-nav > .open > a:focus {
+      box-shadow: 0 -3px 0 rgba(21, 11, 124, 0.5) inset; }
+    .topnavbar .navbar-nav > li > .navbar-text {
+      color: yellow; }
+    .topnavbar .navbar-nav > li > a, .topnavbar .navbar-nav > .open > a {
+      color: #0000; }
+      .topnavbar .navbar-nav > li > a:hover, .topnavbar .navbar-nav > li > a:focus, .topnavbar .navbar-nav > .open > a:hover, .topnavbar .navbar-nav > .open > a:focus {
+        color: var(--iconColor); } }
+
+/* ========================================================================
+   Component: sidebar
+ ========================================================================== */
+.sidebar {
+  background-color: var(--backgroundNavbar) }
+  .sidebar .nav-heading {
+    color: var(--titleNavbar) }
+
+.sidebar-nav > li > a, .sidebar-nav > li > .nav-item {
+  color: #515253; }
+  .sidebar-nav > li > a:focus, .sidebar-nav > li > a:hover, .sidebar-nav > li > .nav-item:focus, .sidebar-nav > li > .nav-item:hover {
+    color: var(--hoverMenusNavbar) }
+  .sidebar-nav > li > a > em, .sidebar-nav > li > .nav-item > em {
+    color: inherits; }
+
+.sidebar-nav > li.active, .sidebar-nav > li.active > a, .sidebar-nav > li.active > .nav-item, .sidebar-nav > li.active .sidebar-nav, .sidebar-nav > li.open, .sidebar-nav > li.open > a, .sidebar-nav > li.open > .nav-item, .sidebar-nav > li.open .sidebar-nav {
+  background-color: #f0f0f0;
+  color: var(--activeMenu) }
+
+.sidebar-nav > li.active > .nav-item > em, .sidebar-nav > li.active > a > em, .sidebar-nav > li.open > .nav-item > em, .sidebar-nav > li.open > a > em {
+  color: var(--activeMenu); }
+
+.sidebar-nav > li.active {
+  border-left-color: #900000; }
+
+.sidebar-subnav {
+  background-color: #fff; }
+  .sidebar-subnav > .sidebar-subnav-header {
+    color: var(--activeMenu) }
+  .sidebar-subnav > li > a, .sidebar-subnav > li > .nav-item {
+    color:  var(--submenuColorInactive)}
+    .sidebar-subnav > li > a:focus, .sidebar-subnav > li > a:hover, .sidebar-subnav > li > .nav-item:focus, .sidebar-subnav > li > .nav-item:hover {
+      color: #900000; }
+  .sidebar-subnav > li.active > a, .sidebar-subnav > li.active > .nav-item {
+    color: #900000; }
+    .sidebar-subnav > li.active > a:after, .sidebar-subnav > li.active > .nav-item:after {
+      border-color: #900000;
+      background-color: #900000; }
+
+/* ========================================================================
+   Component: offsidebar
+ ========================================================================== */
+.offsidebar {
+  border-left: 1px solid greyscale(#cccccc);
+  background-color: var(--backgroundOffSidebar);
+  color: var(--colorTextOffSidebar) }
